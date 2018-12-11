@@ -2,7 +2,7 @@
 
 ### Introduction
 
-Sofy is a simple tool helping you to download/install all your personnal software, in one place, i know how it can be painfull to find softwares to download accross the Web, so i made this tool that will make think easy than ever!
+Sofy is a simple tool helping you to download/install all your software in one place, i know how it can be painfull to find softwares to download accross the Web, so i made this tool that will make think easy than ever!
 
 ### How to use it
 
@@ -14,10 +14,7 @@ When you are in SoFy Web page,
 
 ### How it's works
 
-Sofy contain a python script that read and write in file to find all softwares and all latest versions!
-
-### Example
-
+Sofy contains a python script that read and write in file to find all softwares and all latest versions!
 
 
 ### Authors

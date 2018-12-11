@@ -1,2 +1,0 @@
-Version 1.23|https://vscode.com/download
-Version 1.7|https://vscode.com/download

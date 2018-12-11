@@ -1,1 +1,17 @@
 programming
+audio
+browser
+compression
+development
+education
+game
+imaging
+messaging
+music
+office
+runtime
+security
+sysadmin
+utilities
+video
+other
