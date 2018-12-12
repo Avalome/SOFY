@@ -9,12 +9,14 @@ Sofy is a simple tool helping you to download/install all your software in one p
 When you are in SoFy Web page,
 
 - Just check which software you want in the list, you can filter by category and choose your favorite version.
-- Download the generated Script (Bash / Shell) file or just copy and execute it your self, depend on your current OS.
-- Launch it and let *SoFy* download and install all your software for you.
+- Download the generated file.
+- Launch it with *SoFy* and it will download/install all your software for you.
 
 ### How it's works
 
 Sofy contains a python script that read and write in file to find all softwares and all latest versions!
+
+### Deploy it locally
 
 
 ### Authors
