@@ -1,0 +1,13 @@
+aimp | windows | AIMP is a freeware audio player for windows write by russian developer
+audacity | windows, linux, mac | Audacity is a free multi-track audio editor
+itunes | mac, windows | Itunes is a media player
+mediaPlayerCodecPack | | A simple Audio and video player
+mediaMonkey | | Manage your Movies, musics, audios
+picard | windows, linux, mac | Cross-platform music tagger
+resonic | | Free media player
+SMPlayer | windows, linux | Free Media player
+SonosController | | A smart system of HiFi wireless speakers and audio components
+TagScanner | | Tool for organize and managing your music
+VLC | windows, linux, mac | Media player video and audio, can read video etc...
+
+
