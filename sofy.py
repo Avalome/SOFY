@@ -13,21 +13,32 @@ import os
 # Global Variables
 # -----------------------------------------
 get = ""
+current_os = ""
+current_python = sys.version_info[0]
 
 # -----------------------------------------
 # Methods
 # -----------------------------------------
+# Redefine print for python version
+def printit(message):
+    if current_python == 2:
+        print message
+    elif current_python == 3:
+        print (message)
+    else :
+        os.system("Your Current Python version looks to be not recognize")
+
 # Just for a specific print log
 def sofyPRINT(message):
-    print "SF > "+message
+    printit ("SF > "+message)
 
 # The presentation/ Cleaning method
 def presentation():
     os.system("cls")
-    print "\n----------------------------------------------------------"
-    print "---------------------- S   O   F   Y ---------------------"
-    print "----------------------------------------------------------"
-    print "__________________________________By S@n1x-D4rk3r_________\n"
+    printit ("\n----------------------------------------------------------")
+    printit ("---------------------- S   O   F   Y ---------------------")
+    printit ("----------------------------------------------------------")
+    printit ("__________________________________By S@n1x-D4rk3r_________\n")
     sofyPRINT("Welcome to SoFy, a software manager made for humans!")
 
 #
@@ -57,13 +68,14 @@ def get_platform():
         'win32' : 'Windows'
     }
     if sys.platform not in platforms:
+        current_os = sys.platform
         return sys.platform
+    current_os = platforms[sys.platform]
     return platforms[sys.platform]
 
 # Get Param
 def get_param():
     get = raw_input("SF > Command (help or h for more): ")
-
 
 # -----------------------------------------
 # Main source code
@@ -74,7 +86,6 @@ sofyPRINT("OS detected: '"+get_platform()+"'")
 
 ## Get the current parameter
 get_param()
-
 
 ## Pause the batch script
 os.system("pause")
