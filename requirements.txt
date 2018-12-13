@@ -1,4 +1,3 @@
-platform
 sys
 os
 itertools

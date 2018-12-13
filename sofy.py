@@ -6,10 +6,13 @@
 #
 
 # Imports
-import platform
 import sys
 import os
 
+# -----------------------------------------
+# Global Variables
+# -----------------------------------------
+get = ""
 
 # -----------------------------------------
 # Methods
@@ -43,8 +46,9 @@ def sf_crypt_string(data, key='S@n1x-D4rk3r', encode=False, decode=False):
     if encode:
         return base64.encodestring(sfed).strip()
     return sfed
-
+#
 # Check the current OS
+#
 def get_platform():
     platforms = {
         'linux1' : 'Linux',
@@ -56,6 +60,10 @@ def get_platform():
         return sys.platform
     return platforms[sys.platform]
 
+# Get Param
+def get_param():
+    get = raw_input("SF > Command (help or h for more): ")
+
 
 # -----------------------------------------
 # Main source code
@@ -63,6 +71,10 @@ def get_platform():
 presentation()
 ## Checking the current OS
 sofyPRINT("OS detected: '"+get_platform()+"'")
+
+## Get the current parameter
+get_param()
+
 
 ## Pause the batch script
 os.system("pause")
