@@ -19,30 +19,45 @@ current_python = sys.version_info[0]
 # -------------------------------------------------------------------------------------------
 # Methods
 # -------------------------------------------------------------------------------------------
+#
 # Redefine print for python version
-def printit(message):
+#
+def printIt(message):
     if current_python == 2:
         print message
     elif current_python == 3:
         print (message)
     else :
         os.system("Your Current Python version looks to be not recognize")
+        presentation()
+
+#
+# Redifine the getting value for python version
+#
+def inputIt(message):
+    if current_python == 2:
+        return raw_input(message)
+    elif current_python == 3:
+        return input(message)
+    else :
+        os.system("Your Current Python version looks to be not recognize")
+        presentation()
 
 #
 # Just for a specific print log
 #
 def sofyPRINT(message):
-    printit ("SF > "+message)
+    printIt ("SF > "+message)
 
 #
 # The presentation && Cleaning method
 #
 def presentation():
     os.system("cls")
-    printit ("\n----------------------------------------------------------")
-    printit ("---------------------- S   O   F   Y ---------------------")
-    printit ("----------------------------------------------------------")
-    printit ("__________________________________By S@n1x-D4rk3r_________\n")
+    printIt ("\n----------------------------------------------------------")
+    printIt ("---------------------- S   O   F   Y ---------------------")
+    printIt ("----------------------------------------------------------")
+    printIt ("__________________________________By S@n1x-D4rk3r_________\n")
     sofyPRINT("Welcome to SoFy, a software manager made for humans!")
 
 #
@@ -80,15 +95,18 @@ def get_platform():
 # Get Param and act
 def main():
     # Get the current parameter
-    get_parameter = raw_input("SF > Command (help or h for more): ")
+    get_parameter = inputIt("SF > Command (help or h for more): ")
 
 
 # -------------------------------------------------------------------------------------------
 # Main source code
 # -------------------------------------------------------------------------------------------
+current_os = get_platform()
+
 presentation()
 ## Checking the current OS
-sofyPRINT("OS detected: '"+get_platform()+"'")
+sofyPRINT("OS detected: '"+current_os+"'")
+sofyPRINT("Python version detected: '"+str(current_python)+"'")
 
 ## Start SoFy Core
 main()
