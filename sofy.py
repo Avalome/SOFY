@@ -1,24 +1,24 @@
 #
-#################
-# SOFY Core
-# By Sanix Darker
-#################
+# ==========================
+# > SOFY - Core ---------------
+# > By S@n1x D4rk3r --------------
+# ==================================
 #
 
-# Imports
+# Imports dependencies
 import sys
 import os
 
-# -----------------------------------------
+# -------------------------------------------------------------------------------------------
 # Global Variables
-# -----------------------------------------
-get = ""
+# -------------------------------------------------------------------------------------------
+get_parameter = ""
 current_os = ""
 current_python = sys.version_info[0]
 
-# -----------------------------------------
+# -------------------------------------------------------------------------------------------
 # Methods
-# -----------------------------------------
+# -------------------------------------------------------------------------------------------
 # Redefine print for python version
 def printit(message):
     if current_python == 2:
@@ -28,11 +28,15 @@ def printit(message):
     else :
         os.system("Your Current Python version looks to be not recognize")
 
+#
 # Just for a specific print log
+#
 def sofyPRINT(message):
     printit ("SF > "+message)
 
-# The presentation/ Cleaning method
+#
+# The presentation && Cleaning method
+#
 def presentation():
     os.system("cls")
     printit ("\n----------------------------------------------------------")
@@ -73,19 +77,21 @@ def get_platform():
     current_os = platforms[sys.platform]
     return platforms[sys.platform]
 
-# Get Param
-def get_param():
-    get = raw_input("SF > Command (help or h for more): ")
+# Get Param and act
+def main():
+    # Get the current parameter
+    get_parameter = raw_input("SF > Command (help or h for more): ")
 
-# -----------------------------------------
+
+# -------------------------------------------------------------------------------------------
 # Main source code
-# -----------------------------------------
+# -------------------------------------------------------------------------------------------
 presentation()
 ## Checking the current OS
 sofyPRINT("OS detected: '"+get_platform()+"'")
 
-## Get the current parameter
-get_param()
+## Start SoFy Core
+main()
 
 ## Pause the batch script
 os.system("pause")
