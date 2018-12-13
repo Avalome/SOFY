@@ -10,7 +10,10 @@ import platform
 import sys
 import os
 
+
+# -----------------------------------------
 # Methods
+# -----------------------------------------
 # Just for a specific print log
 def sofyPRINT(message):
     print "SF > "+message
@@ -41,15 +44,25 @@ def sf_crypt_string(data, key='S@n1x-D4rk3r', encode=False, decode=False):
         return base64.encodestring(sfed).strip()
     return sfed
 
+# Check the current OS
+def get_platform():
+    platforms = {
+        'linux1' : 'Linux',
+        'linux2' : 'Linux',
+        'darwin' : 'OS X',
+        'win32' : 'Windows'
+    }
+    if sys.platform not in platforms:
+        return sys.platform
+    return platforms[sys.platform]
+
+
+# -----------------------------------------
+# Main source code
+# -----------------------------------------
 presentation()
 ## Checking the current OS
-if platform.system() == 'Windows':
-    sofyPRINT("OS detected: '"+platform.platform()+"'")
-elif platform.system() == 'Linux':
-    sofyPRINT("OS detected: "+platform.platform())
-elif platform.system() == 'Mac':
-    sofyPRINT("OS detected: "+platform.platform())
-else:
-    sofyPRINT("SoFy is not yet configured for this kind of OS")
+sofyPRINT("OS detected: '"+get_platform()+"'")
 
+## Pause the batch script
 os.system("pause")
