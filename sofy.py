@@ -53,12 +53,16 @@ def sofyPRINT(message):
 # The presentation && Cleaning method
 #
 def presentation():
+    # Cleaning the console
     os.system("cls")
     printIt ("\n----------------------------------------------------------")
     printIt ("---------------------- S   O   F   Y ---------------------")
     printIt ("----------------------------------------------------------")
     printIt ("__________________________________By S@n1x-D4rk3r_________\n")
     sofyPRINT("Welcome to SoFy, a software manager made for humans!")
+    ## Checking the current OS
+    sofyPRINT("OS detected: '"+current_os+"'")
+    sofyPRINT("Python version detected: '"+str(current_python)+"'")
 
 #
 # Encrypt/Decrypt Key From SOFY
@@ -103,10 +107,8 @@ def main():
 # -------------------------------------------------------------------------------------------
 current_os = get_platform()
 
+# Presentation method
 presentation()
-## Checking the current OS
-sofyPRINT("OS detected: '"+current_os+"'")
-sofyPRINT("Python version detected: '"+str(current_python)+"'")
 
 ## Start SoFy Core
 main()

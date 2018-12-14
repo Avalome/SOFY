@@ -19,6 +19,10 @@ Sofy contains a python script that read and write in file to find all softwares 
 ### Deploy it locally
 
 
+### Ressources used
+
+- [luongvo209 - Awesome-Linux-Software](https://github.com/luongvo209/Awesome-Linux-Software)
+
 ### Authors
 
 - [Sanix-Darker](https://github.com/sanix-darker)
