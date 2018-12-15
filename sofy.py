@@ -36,9 +36,9 @@ def printIt(message):
 #
 def inputIt(message):
     if current_python == 2:
-        return raw_input(message)
+        return raw_input("SF > "+message)
     elif current_python == 3:
-        return input(message)
+        return input("SF > "+message)
     else :
         os.system("Your Current Python version looks to be not recognize")
         presentation()
@@ -65,22 +65,6 @@ def presentation():
     sofyPRINT("Python version detected: '"+str(current_python)+"'")
 
 #
-# Encrypt/Decrypt Key From SOFY
-# Usage:
-# secret_data = "239054"
-# print sf_crypt_string(secret_data, encode=True)
-# print sf_crypt_string(sf_crypt_string(secret_data, encode=True), decode=True)
-#
-def sf_crypt_string(data, key='S@n1x-D4rk3r', encode=False, decode=False):
-    from itertools import izip, cycle
-    import base64
-    if decode:
-        data = base64.decodestring(data)
-    sfed = ''.join(chr(ord(x) ^ ord(y)) for (x,y) in izip(data, cycle(key)))
-    if encode:
-        return base64.encodestring(sfed).strip()
-    return sfed
-#
 # Check the current OS
 #
 def get_platform():
@@ -97,11 +81,19 @@ def get_platform():
     return platforms[sys.platform]
 
 def help_func():
-    sofyPRINT("SoFy help you fast installing your software, list of commands:");
+    sofyPRINT("SoFy help you fast installing your software, list of commands:")
+    printIt("\nh or help: to get Helping functions \nEx: help")
+    printIt("\nq or quit: to exit SoFy \nEx: quit")
+    printIt("\ng or get : write this command and hit Enter first, and next in 'Name(s):' just write software you want.")
+    printIt("Ex: Name: VLC,Google Chrome\n")
 
 def quit_func():
     sofyPRINT("Thank you for using SoFy");
     sys.exit()
+
+def get_func():
+    sofyPRINT("What do you want me to get for you on the WEB?")
+    to_find = inputIt("Name(s):")
 
 def Switch(value):
     if value.lower() == "h" or value.lower() == "help":
@@ -110,6 +102,8 @@ def Switch(value):
         quit_func()
     if value.lower() == "e" or value.lower() == "exit":
         quit_func()
+    if value.lower() == "g" or value.lower() == "get":
+        get_func()
     else:
         sofyPRINT("Command not found, please try again!")
         main()
@@ -117,10 +111,9 @@ def Switch(value):
 # Get Param and act
 def main():
     # Get the current parameter
-    get_parameter = inputIt("SF > Command (help / h or quit / q to stop): ")
+    get_parameter = inputIt("Command (help / h or quit / q to stop): ")
     # switch case on the parameter given
     Switch(get_parameter)
-
 
 # -------------------------------------------------------------------------------------------
 # Main source code
