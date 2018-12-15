@@ -96,10 +96,22 @@ def get_platform():
     current_os = platforms[sys.platform]
     return platforms[sys.platform]
 
+def help_func():
+    sofyPRINT("SoFy help you fast installing your software, list of commands:");
+
+def Switch(value):
+    if value.lower() == "h" or value.lower() == "help":
+        help_func()
+    else:
+        sofyPRINT("Command not found, please try again")
+        main()
+
 # Get Param and act
 def main():
     # Get the current parameter
     get_parameter = inputIt("SF > Command (help or h for more): ")
+    # switch case on the parameter given
+    Switch(get_parameter)
 
 
 # -------------------------------------------------------------------------------------------
