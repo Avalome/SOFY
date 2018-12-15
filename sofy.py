@@ -99,17 +99,25 @@ def get_platform():
 def help_func():
     sofyPRINT("SoFy help you fast installing your software, list of commands:");
 
+def quit_func():
+    sofyPRINT("Thank you for using SoFy");
+    sys.exit()
+
 def Switch(value):
     if value.lower() == "h" or value.lower() == "help":
         help_func()
+    if value.lower() == "q" or value.lower() == "quit":
+        quit_func()
+    if value.lower() == "e" or value.lower() == "exit":
+        quit_func()
     else:
-        sofyPRINT("Command not found, please try again")
+        sofyPRINT("Command not found, please try again!")
         main()
 
 # Get Param and act
 def main():
     # Get the current parameter
-    get_parameter = inputIt("SF > Command (help or h for more): ")
+    get_parameter = inputIt("SF > Command (help / h or quit / q to stop): ")
     # switch case on the parameter given
     Switch(get_parameter)
 
